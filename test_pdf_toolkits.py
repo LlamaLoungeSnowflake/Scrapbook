@@ -30,32 +30,41 @@ def test_toolkits():
         print(f"🚀 Testing {app.name}")
         print("="*40)
         try:
-            actions = toolset.get_actions(app=app)
-            html_to_pdf_action = None
-            
+            # The `get_actions` method does not exist in new Composio SDK versions.
+            # Instead we should use `get_action_schemas` to find them, or just get them by App name.
+            try:
+                schemas = toolset.get_action_schemas(apps=[app])
+            except Exception as e:
+                print(f"⚠️ Error fetching schemas for {app.name}: {e}")
+                continue
+
+            html_to_pdf_action_name = None
+            schema_for_action = None
+
             # Find the action matching html and pdf
-            for action in actions:
-                name = action.name.lower()
+            for schema in schemas:
+                name = schema.get("name", "").lower()
                 if "html" in name and "pdf" in name:
-                    html_to_pdf_action = action
+                    html_to_pdf_action_name = schema.get("name")
+                    schema_for_action = schema
                     break
             
-            if not html_to_pdf_action:
+            if not html_to_pdf_action_name:
                 print(f"⚠️ Could not find an HTML to PDF action for {app.name}.")
-                print(f"Available actions: {[a.name for a in actions]}")
+                print(f"Available actions: {[s.get('name') for s in schemas]}")
                 continue
                 
-            print(f"✅ Found action: {html_to_pdf_action.name}")
+            print(f"✅ Found action: {html_to_pdf_action_name}")
             
             # Show parameters
-            schema = html_to_pdf_action.parameters
+            params_schema = schema_for_action.get("parameters", {})
             print("\n📝 Expected Parameters Schema:")
-            print(json.dumps(schema, indent=2))
+            print(json.dumps(params_schema, indent=2))
             
             # Try to build payload dynamically based on schema properties
             params = {}
-            if schema and 'properties' in schema:
-                props = schema['properties']
+            if params_schema and 'properties' in params_schema:
+                props = params_schema['properties']
                 # Common payload keys
                 for key in ['html', 'htmlCode', 'source', 'html_content', 'content']:
                     if key in props:
@@ -79,10 +88,12 @@ def test_toolkits():
             else:
                 params['html'] = html_content
 
-            print(f"\n⚙️ Executing {html_to_pdf_action.name}...")
+            print(f"\n⚙️ Executing {html_to_pdf_action_name}...")
             
+            # Note: execute_action takes the action name in newer versions, or the Action enum.
+            # Let's import Action and try to resolve it dynamically, or execute by name directly.
             response = toolset.execute_action(
-                action=html_to_pdf_action, 
+                action=html_to_pdf_action_name, 
                 params=params
             )
             
