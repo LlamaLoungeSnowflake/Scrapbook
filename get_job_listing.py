@@ -60,7 +60,21 @@ def get_job_listing(job_url: str) -> dict:
     data_resp.raise_for_status()
     data = data_resp.json()
     
-    return data[0] if data else {}
+    raw_job = data[0] if data else {}
+    if not raw_job:
+        return {}
+
+    direct_fields = {
+        "job_title", "company_name", "job_location", "job_summary",
+        "job_seniority_level", "job_employment_type", "job_industries",
+        "job_base_pay_range", "job_description_formatted", "base_salary"
+    }
+
+    keys_to_remove = [k for k in raw_job.keys() if k not in direct_fields]
+    for k in keys_to_remove:
+        raw_job.pop(k, None)
+
+    return raw_job
 
 if __name__ == "__main__":
     import json
