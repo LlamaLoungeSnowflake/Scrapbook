@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: get_job_listing",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/get_job_listing.py",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Debug: get_linkedin_profile",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/get_linkedin_profile.py",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
