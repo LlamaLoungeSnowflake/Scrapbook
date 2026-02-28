@@ -18,6 +18,15 @@
       "python": "${workspaceFolder}/.venv/bin/python",
       "console": "integratedTerminal",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Debug: test_pdf_toolkits",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/test_pdf_toolkits.py",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }

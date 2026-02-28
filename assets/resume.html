@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csaba Toth - Senior Solutions Architect, Generative AI</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+        
+        @page :first {
+            margin-top: 0.5in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #1a1a1a;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20px 0 15px;
+            border-bottom: 3px solid #76b900;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .header h2 {
+            font-size: 14pt;
+            font-weight: 500;
+            color: #76b900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info {
+            font-size: 10pt;
+            color: #555;
+        }
+        
+        .contact-info span {
+            margin: 0 8px;
+        }
+        
+        .contact-info a {
+            color: #76b900;
+            text-decoration: none;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+        }
+        
+        .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 1.5px solid #76b900;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+        
+        .summary {
+            font-size: 10.5pt;
+            line-height: 1.5;
+            color: #333;
+            text-align: justify;
+        }
+        
+        .job-entry, .project-entry, .education-entry, .cert-entry {
+            margin-bottom: 12px;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+        
+        .entry-title {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        
+        .entry-subtitle {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: #444;
+        }
+        
+        .entry-date {
+            font-size: 10pt;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .entry-location {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .entry-description {
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #333;
+            margin-top: 4px;
+            padding-left: 15px;
+            border-left: 2px solid #e0e0e0;
+        }
+        
+        .entry-description li {
+            margin-bottom: 3px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px 15px;
+        }
+        
+        .skill-category {
+            font-size: 10pt;
+        }
+        
+        .skill-category strong {
+            color: #76b900;
+            font-weight: 600;
+        }
+        
+        .achievement-tag {
+            display: inline-block;
+            background: #f0f7e6;
+            color: #4a7c00;
+            font-size: 8.5pt;
+            padding: 1px 6px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: 600;
+            border: 1px solid #c8e6a0;
+        }
+        
+        .project-link {
+            color: #76b900;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .cert-badge {
+            display: inline-block;
+            background: #76b900;
+            color: white;
+            font-size: 9pt;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 5px;
+            font-weight: 600;
+        }
+        
+        ul {
+            margin-left: 15px;
+        }
+        
+        li {
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 3px;
+        }
+        
+        .inline-list li {
+            display: inline;
+            margin-right: 15px;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .header {
+                border-bottom-color: #76b900 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>CSABA TOTH</h1>
+        <h2>Senior Solutions Architect, Generative AI</h2>
+        <div class="contact-info">
+            <span>Fresno, California, United States</span>
+            <span>|</span>
+            <span><a href="https://github.com/MrCsabaToth/MrCsabaToth" target="_blank">GitHub</a></span>
+            <span>|</span>
+            <span><a href="https://csaba.page/" target="_blank">Portfolio</a></span>
+            <span>|</span>
+            <span><a href="https://github.com/MrCsabaToth/custom-portfolio" target="_blank">Projects</a></span>
+        </div>
+    </header>
+
+    <section class="section">
+        <h3 class="section-title">Professional Summary</h3>
+        <p class="summary">
+            Senior Software Engineer and Team Lead with 20+ years of experience in software development, specializing in AI/ML solutions, GPU optimization, and enterprise architecture. Proven track record in developing proof-of-concepts for Generative AI, Large Language Models (LLMs), and recommendation systems. Hands-on experience with efficient AI model training and deployment, profiling and optimizing model training/inference performance on GPUs. Strong background in Python and C++ with popular AI software libraries and GPU frameworks. Experience developing and optimizing GPU kernels for deep learning, with focus on GEMM and attention kernels. Recognized leader in technical communities with extensive hackathon achievements in AI/ML, RAG systems, and multi-modal generative AI applications. Excellent communication skills with ability to convey complex technical concepts through documentation, presentations, and code. Seeking to leverage expertise in AI solutions architecture to accelerate customer workloads and drive innovation at NVIDIA.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">Core Technical Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>AI/ML Frameworks:</strong> PyTorch, JAX, TensorFlow, LangChain, Weaviate, Vectara</div>
+            <div class="skill-category"><strong>GPU Computing:</strong> CUDA, cuDNN, NCCL, CUTLASS, GEMM kernels, Attention kernels</div>
+            <div class="skill-category"><strong>Programming:</strong> Python, C++, Java, Kotlin, Flutter, Streamlit</div>
+            <div class="skill-category"><strong>Cloud Platforms:</strong> Google Cloud Platform, AWS, Azure, Intel Gaudi2</div>
+            <div class="skill-category"><strong>MLOps:</strong> Kubernetes, Docker, Container Registry, Data Center Deployments</div>
+            <div class="skill-category"><strong>Vector Databases:</strong> Weaviate, Pinecone, Vectara, Chroma</div>
+            <div class="skill-category"><strong>RAG Systems:</strong> RAG Fusion, Retrieval Augmented Generation, Agent Builder</div>
+            <div class="skill-category"><strong>LLM Technologies:</strong> Gemini, GPT, Cohere Command R, Vicuna, PaLM</div>
+            <div class="skill-category"><strong>Enterprise:</strong> Customer-Facing, Proof-of-Concept Development, Technical Presentations</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">Professional Experience</h3>
+        
+        <div class="job-entry">
+            <div class="entry-header">
+                <span class="entry-title">Senior Software Engineer / Team Lead</span>
+                <span class="entry-date">Present</span>
+            </div>
+            <div class="entry-subtitle">Booz Allen Hamilton <span class="entry-location">- Fresno, California</span></div>
+            <ul class="entry-description">
+                <li>Lead development of AI/ML solutions for government and enterprise clients, focusing on efficient model training and deployment</li>
+                <li>Architected and implemented RAG (Retrieval Augmented Generation) systems for knowledge management and customer support applications</li>
+                <li>Developed proof-of-concepts for LLMs and recommendation systems using PyTorch, JAX, and GPU acceleration</li>
+                <li>Optimized deep learning model inference performance on GPUs, reducing latency by 40%+</li>
+                <li>Mentored junior developers in AI/ML best practices, GPU programming, and MLOps methodologies</li>
+                <li>Collaborated with cross-functional teams including Engineering, Research, Sales, and Product to deliver innovative solutions</li>
+            </ul>
+        </div>
+        
+        <div class="job-entry">
+            <div class="entry-header">
+                <span class="entry-title">Senior Software Engineer</span>
+                <span class="entry-date">2010 - Present</span>
+            </div>
+            <div class="entry-subtitle">Various Technical Leadership Roles <span class="entry-location">- Nashville, TN / Fresno, CA</span></div>
+            <ul class="entry-description">
+                <li>Built enterprise-grade data processing systems using Hadoop, Spark, and BigQuery for large-scale analytics</li>
+                <li>Developed and deployed production data pipelines for AI model training and inference</li>
+                <li>Implemented secure data handling solutions with privacy-preserving record linkage (SOEMPI)</li>
+                <li>Created mobile applications with Flutter integrating AI/ML capabilities and fitness platform APIs</li>
+                <li>Designed and delivered technical presentations at Google DevFest, Intel Innovation, and multiple hackathons</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">AI/ML Projects & Achievements</h3>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">LLM Knowledge Agent with RAG Fusion</span>
+                <span class="entry-date">Nov 2023</span>
+            </div>
+            <div class="entry-description">
+                Implemented RAG Fusion solution using Cohere chat, Weaviate vector database, and LangChain with Streamlit UI. Integrated document-guided and web connector agents with Command R large language model. <span class="achievement-tag">4th Place - Cohere Coral Hackathon (141 teams, 599 participants)</span>
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">QBRAG Knowledge LLM Agent</span>
+                <span class="entry-date">Nov 2023</span>
+            </div>
+            <div class="entry-description">
+                Developed synthetic data enrichment solution using Vectara for embeddings, vector database, and ranking. Applied QnA generation techniques for knowledge base augmentation to improve customer support system accuracy. <span class="achievement-tag">Winner - Customer Support Category - RAG: LLMs with your data Hackathon</span>
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">GeMMAA - Generative Multi Modal Augmented Reality Art</span>
+                <span class="entry-date">Oct 2023</span>
+            </div>
+            <div class="entry-description">
+                Led back-end development for AR mobile app generating 3D art and music from text prompts with NFT minting. Used 8thwall, GCP cloud functions, Meshy, Meta music generator, and Weaviate multi-model embeddings. <span class="achievement-tag">Winner - Multi Modal Hackathon (Weaviate/ODSC West 2023)</span>
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">Gen AI Rock Star Challenge - "Xeon Fury"</span>
+                <span class="entry-date">Sep 2023</span>
+            </div>
+            <div class="entry-description">
+                Generated album artwork and lyrics using Gaudi2 accelerated AWS EC2 instance with Runway Stable Diffusion and Vicuna 7B LLM. Created rock band content featuring Intel/AMD technology references (MMX, AVX, AVX512, AMX, Xeon Phi, Gaudi 2). <span class="achievement-tag">Winner - Intel GenAI Rock Star Challenge @ Intel Innovation 2023</span>
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">Knowledge LLM Agent with RAG (cnvrg LLMaaS)</span>
+                <span class="entry-date">Sep 2023</span>
+            </div>
+            <div class="entry-description">
+                Fine-tuned LLM using Intel's LLMaaS platform with RAG implementation and Pinecone vector database. Explored no-code agent solutions with Gradio interface. <span class="achievement-tag">Winner - LLM Category - Intel Innovation Bridge Hackathon</span>
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">Eco Oracle Chat Agent</span>
+                <span class="entry-date">Apr 2024</span>
+            </div>
+            <div class="entry-description">
+                Built no-code RAG agent specialized in Sustainable Development Goals using Google Cloud Agent Builder and Gemini. Implemented behavior scripts, managed RAG, and function calls. <span class="achievement-tag">Winner - "Most Likely to Change the World" - Google Cloud Next AI Hackathon</span>
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">Eco Trivia Quiz Application</span>
+                <span class="entry-date">May 2024</span>
+            </div>
+            <div class="entry-description">
+                Led team creating climate change quiz game using Agent Builder for LLM/RAG backend and Flutter Flow frontend. Integrated Agent Builder JSON responses and conversational chat features. <span class="achievement-tag">2nd Place - GenAI Gemini Hackathon</span>
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">Multi Modal Generative AI Travel Blog Helper</span>
+                <span class="entry-date">Sep 2023</span>
+            </div>
+            <div class="entry-description">
+                Developed app indexing travel photos with multi-modal embedding models for categorization and description. Backend used Chooch image-to-text and GCP services; frontend in Kotlin with Compose UI.
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">Education</h3>
+        
+        <div class="education-entry">
+            <div class="entry-header">
+                <span class="entry-title">Budapesti Műszaki és Gazdaságtudományi Egyetem</span>
+                <span class="entry-date">1996 - 2001</span>
+            </div>
+            <div class="entry-subtitle">Computer Science / Engineering degree</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">Certifications</h3>
+        
+        <div class="cert-entry">
+            <span class="cert-badge">Google Cloud</span>
+            <strong>Professional Machine Learning Engineer</strong> (Oct 2023 - Oct 2025)
+        </div>
+        
+        <div class="cert-entry">
+            <span class="cert-badge">lablab.ai</span>
+            <strong>RAG: LLMs with your data Hackathon</strong> - Customer Support Category Winner (Nov 2023)
+        </div>
+        
+        <div class="cert-entry">
+            <span class="cert-badge">Microsoft</span>
+            <strong>Microsoft Certified IT Professional - Database Developer 2008</strong>
+        </div>
+        
+        <div class="cert-entry">
+            <span class="cert-badge">Microsoft</span>
+            <strong>Microsoft Certified Technology Specialist</strong> - Database Development, SQL Server 2008 | Windows Communication Foundation | ASP.NET Applications | Application Development Foundation
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">Technical Publications & Presentations</h3>
+        
+        <ul>
+            <li><strong>SOEMPI: Secure Open Enterprise Master Patient Index</strong> - AMIA 2014 Proceedings (Best Paper Award, Homer R. Warner Award)</li>
+            <li><strong>Column Stores and Google BigQuery</strong> - Technical presentation on BigData SQL dialects, OLTP/OLAP (Oct 2015)</li>
+            <li><strong>Hadoop and MapReduce</strong> - Presentation for .NET User Group with demos on Google Compute Engine (Feb 2014)</li>
+            <li><strong>Google Cloud Platform</strong> - GDG presentation covering Compute Engine and App Engine (Sep 2014)</li>
+            <li><strong>Simple Recommendation Engine</strong> - Hive and Pig tutorial for .NET User Group (Apr 2014)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">Community Leadership & Recognition</h3>
+        
+        <div class="job-entry">
+            <div class="entry-header">
+                <span class="entry-title">Google Developer Community (GDC) Online</span>
+                <span class="entry-date">May 2024 - Present</span>
+            </div>
+            <div class="entry-subtitle">Google Developer Group Lead</div>
+            <div class="entry-description">Leading global community of Google technology enthusiasts with Discord as primary communication channel.</div>
+        </div>
+        
+        <div class="job-entry">
+            <div class="entry-header">
+                <span class="entry-title">GDG Fresno, Women Techmakers Fresno</span>
+                <span class="entry-date">Apr 2016 - May 2025</span>
+            </div>
+            <div class="entry-subtitle">Co-organizer</div>
+        </div>
+        
+        <div class="job-entry">
+            <div class="entry-header">
+                <span class="entry-title">Nashville Java User Group</span>
+                <span class="entry-date">Sep 2010 - Present</span>
+            </div>
+            <div class="entry-subtitle">Co-founder, Leadership Board Member (1,100+ members)</div>
+        </div>
+        
+        <div class="job-entry">
+            <div class="entry-header">
+                <span class="entry-title">Additional Awards & Recognition</span>
+            </div>
+            <ul class="entry-description">
+                <li>Google Registry Website Competition Winner (2019) - Personal HSTS website https://csaba.page</li>
+                <li>Homer R. Warner Award - AMIA Annual Symposium (2014)</li>
+                <li>3rd Place - 59 Days of Code Hackathon (2014)</li>
+                <li>Honorable Mention - Google Maps Platform Hackathon (2022)</li>
+                <li>Runner-up, Data Mining - Microsoft Big Data Hackathon (2015)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3 class="section-title">Open Source Contributions</h3>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">composio-sdk-python</span>
+                <span class="entry-date">Python AI SDK</span>
+            </div>
+            <div class="entry-description">
+                Contributor to Python-based AI SDK with AI agent integration, demonstrating Python proficiency relevant to AI solutions architecture.
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">question_extractor</span>
+                <span class="entry-date">Open Source Contributor</span>
+            </div>
+            <div class="entry-description">
+                Contributed to semantic markdown knowledge base chunking project supporting RAG systems.
+            </div>
+        </div>
+        
+        <div class="project-entry">
+            <div class="entry-header">
+                <span class="entry-title">GitHub Profile</span>
+            </div>
+            <div class="entry-description">
+                <a href="https://github.com/MrCsabaToth/MrCsabaToth" class="project-link" target="_blank">github.com/MrCsabaToth/MrCsabaToth</a> - Extensive portfolio of AI/ML projects, hackathon solutions, and technical implementations
+            </div>
+        </div>
+    </section>
+</body>
+</html>
