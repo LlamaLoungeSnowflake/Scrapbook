@@ -47,7 +47,7 @@ def get_job_listing(job_url: str) -> dict:
         info = status_resp.json()
         status = info.get("status")
 
-        if status == "ready":
+        if status == "ready" or status is None and info.get("job_title"):
             break
         if status == "failed":
             raise RuntimeError(f"Snapshot failed: {info}")
