@@ -1,0 +1,64 @@
+{
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "Stony Brook University",
+      "start_date": "Jul 2025",
+      "end_date": "Present",
+      "location": "Remote",
+      "highlights": [
+        "Engineered an end to end AI driven content segmentation pipeline using Python, Django and Redis, reducing response latency by 35 percent",
+        "Designed asynchronous processing workflows and evaluated Gemini 2.5 and LangChain systems, improving output accuracy by 18 percent",
+        "Optimized prompt engineering through controlled experiments and data driven evaluation"
+      ]
+    },
+    {
+      "title": "Graduate Research Assistant",
+      "company": "Stony Brook University",
+      "start_date": "Aug 2024",
+      "end_date": "May 2025",
+      "location": "On-site",
+      "highlights": [
+        "Built ML enhanced accessibility systems integrating LLMs with NVDA for document and web interpretation",
+        "Developed Chrome extensions and NVDA plugins for automated navigation support",
+        "Designed reusable data pipelines and Django backend services for scalable experimentation"
+      ]
+    },
+    {
+      "title": "Teaching Assistant – Data Structures (CSE 214)",
+      "company": "Stony Brook University",
+      "start_date": "Jun 2024",
+      "end_date": "Aug 2024",
+      "location": "Remote",
+      "highlights": [
+        "Led Java and algorithms sessions for 70 plus students covering recursion, trees, hash maps and performance optimization",
+        "Provided structured debugging support and improved student concept clarity"
+      ]
+    },
+    {
+      "title": "Data Engineer",
+      "company": "Accenture",
+      "start_date": "Sep 2022",
+      "end_date": "Aug 2023",
+      "location": "Hybrid",
+      "highlights": [
+        "Designed and optimized Talend ETL pipelines on Snowflake improving data throughput and reliability",
+        "Implemented BERT based NLP models for pharmaceutical text labeling automation",
+        "Built Flask based chatbot handling 50 plus daily support tickets reducing misclassification",
+        "Collaborated across global teams using Agile and Jira workflows"
+      ]
+    },
+    {
+      "title": "Application Development Associate",
+      "company": "Accenture",
+      "start_date": "Jun 2021",
+      "end_date": "Sep 2022",
+      "location": "Hybrid",
+      "highlights": [
+        "Developed Snowflake data models and secure ETL workflows",
+        "Improved SQL and Unix validation logic for cleaner pipeline execution",
+        "Built backend integrations using Java, Python and Talend"
+      ]
+    }
+  ]
+}
