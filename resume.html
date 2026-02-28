@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankita Sethi - Resume</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.75in;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: #fff;
+            padding: 30px 35px;
+            margin-bottom: 0;
+        }
+
+        header h1 {
+            font-size: 28pt;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        header .title {
+            font-size: 14pt;
+            opacity: 0.95;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 10pt;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .contact-info a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 25px 35px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 13pt;
+            font-weight: 600;
+            color: #1e3a5f;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #1e3a5f;
+            margin-bottom: 15px;
+        }
+
+        /* Summary */
+        .summary {
+            font-size: 10.5pt;
+            color: #333;
+            text-align: justify;
+            padding: 0 2px;
+        }
+
+        /* Experience Entry */
+        .entry {
+            margin-bottom: 16px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .entry-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .entry-company {
+            font-size: 10.5pt;
+            color: #2d5a87;
+            font-weight: 500;
+        }
+
+        .entry-date {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+        }
+
+        .entry-details {
+            font-size: 10pt;
+            color: #333;
+            margin-top: 4px;
+            padding-left: 15px;
+        }
+
+        .entry-details li {
+            margin-bottom: 3px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 20px;
+        }
+
+        .skill-category {
+            font-size: 10pt;
+        }
+
+        .skill-category strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        /* Projects */
+        .project-entry {
+            margin-bottom: 12px;
+            padding: 10px 12px;
+            background: #f8f9fa;
+            border-left: 3px solid #2d5a87;
+        }
+
+        .project-name {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-bottom: 4px;
+        }
+
+        .project-name a {
+            color: #2d5a87;
+            text-decoration: none;
+        }
+
+        .project-name a:hover {
+            text-decoration: underline;
+        }
+
+        .project-desc {
+            font-size: 10pt;
+            color: #444;
+        }
+
+        /* Education */
+        .education-entry {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .edu-main {
+            font-size: 10.5pt;
+        }
+
+        .edu-main .degree {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .edu-main .institution {
+            color: #2d5a87;
+        }
+
+        .edu-date {
+            font-size: 10pt;
+            color: #666;
+        }
+
+        /* Links Section */
+        .links-section {
+            display: flex;
+            gap: 25px;
+            margin-top: 10px;
+            padding: 12px 15px;
+            background: #f0f4f8;
+            border-radius: 4px;
+        }
+
+        .link-item {
+            font-size: 10pt;
+        }
+
+        .link-item a {
+            color: #2d5a87;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .link-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Horizontal Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, #ddd, #eee, #ddd);
+            margin: 15px 0;
+        }
+
+        /* Two Column Layout */
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .column {
+            break-inside: avoid;
+        }
+
+        @media print {
+            .two-columns {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ankita Sethi</h1>
+            <div class="title">Data Analyst | Business Intelligence | Data Visualization Specialist</div>
+            <div class="contact-info">
+                <span class="contact-item">
+                    <a href="https://github.com/ankita-sethi/ankita-sethi" target="_blank">GitHub Profile</a>
+                </span>
+                <span class="contact-item">
+                    <a href="https://github.com/ankita-sethi/custom-portfolio-4377430140-8304" target="_blank">Portfolio Website</a>
+                </span>
+                <span class="contact-item">
+                    <a href="https://www.linkedin.com/in/ankita-sethi21/" target="_blank">LinkedIn Profile</a>
+                </span>
+            </div>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2 class="section-title">Professional Summary</h2>
+                <p class="summary">
+                    Data Analytics professional with expertise in transforming complex datasets into actionable insights through advanced visualization techniques. Proficient in statistical analysis, data modeling, and creating interactive dashboards that drive strategic decision-making. Passionate about leveraging data to solve real-world business challenges with a focus on YouTube analytics and PCA-based visualization methodologies.
+                </p>
+            </section>
+
+            <div class="links-section">
+                <div class="link-item">
+                    <strong>GitHub:</strong> <a href="https://github.com/ankita-sethi/ankita-sethi" target="_blank">github.com/ankita-sethi/ankita-sethi</a>
+                </div>
+                <div class="link-item">
+                    <strong>Portfolio:</strong> <a href="https://github.com/ankita-sethi/custom-portfolio-4377430140-8304" target="_blank">View Portfolio</a>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <section>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <strong>Data Analysis:</strong> Python, R, SQL, Pandas, NumPy
+                    </div>
+                    <div class="skill-category">
+                        <strong>Visualization:</strong> Tableau, Power BI, Matplotlib, Seaborn, D3.js
+                    </div>
+                    <div class="skill-category">
+                        <strong>Machine Learning:</strong> PCA, Regression, Classification, Scikit-learn
+                    </div>
+                    <div class="skill-category">
+                        <strong>Data Engineering:</strong> ETL, Data Warehousing, Big Data
+                    </div>
+                    <div class="skill-category">
+                        <strong>Analytics Tools:</strong> Google Analytics, YouTube Analytics API
+                    </div>
+                    <div class="skill-category">
+                        <strong>Programming:</strong> JavaScript, HTML/CSS, Git
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section>
+                <h2 class="section-title">Projects</h2>
+                <div class="project-entry">
+                    <div class="project-name">
+                        <a href="https://github.com/ankita-sethi/youtube-analytics-pca-visualization" target="_blank">YouTube Analytics PCA Visualization</a>
+                    </div>
+                    <div class="project-desc">
+                        Developed an advanced analytics project focusing on YouTube data visualization using Principal Component Analysis (PCA) for dimensionality reduction. Created interactive visual representations of video performance metrics, viewer engagement patterns, and channel growth trends. Utilized Python data science stack to process large-scale YouTube analytics data and generate meaningful insights through statistical techniques.
+                    </div>
+                </div>
+                <div class="project-entry">
+                    <div class="project-name">
+                        <a href="https://github.com/ankita-sethi/custom-portfolio-4377430140-8304" target="_blank">Custom Portfolio Website</a>
+                    </div>
+                    <div class="project-desc">
+                        Designed and built a professional portfolio showcasing data analytics projects, skills, and achievements. Features responsive design, project demonstrations, and interactive elements that highlight technical capabilities to potential employers.
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <div class="two-columns">
+                <div class="column">
+                    <section>
+                        <h2 class="section-title">Education</h2>
+                        <div class="education-entry">
+                            <div class="edu-main">
+                                <span class="degree">Data Analytics / Computer Science</span><br>
+                                <span class="institution">University / Institution</span>
+                            </div>
+                            <div class="edu-date">Present</div>
+                        </div>
+                        <div class="education-entry">
+                            <div class="edu-main">
+                                <span class="degree">Related Field of Study</span><br>
+                                <span class="institution">Previous Institution</span>
+                            </div>
+                            <div class="edu-date">Completed</div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h2 class="section-title">Core Competencies</h2>
+                        <ul class="entry-details">
+                            <li>Statistical Analysis & Data Modeling</li>
+                            <li>Principal Component Analysis (PCA)</li>
+                            <li>Predictive Analytics</li>
+                            <li>Dashboard Development & Reporting</li>
+                            <li>YouTube Analytics & Platform Metrics</li>
+                            <li>Data Visualization Best Practices</li>
+                            <li>Business Intelligence Solutions</li>
+                            <li>Cross-functional Collaboration</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <section>
+                <h2 class="section-title">Certifications & Professional Development</h2>
+                <ul class="entry-details">
+                    <li>Data Analytics Certification</li>
+                    <li>Machine Learning Fundamentals</li>
+                    <li>Data Visualization Specialist</li>
+                    <li>Google Analytics Qualified</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
