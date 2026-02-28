@@ -3,6 +3,7 @@ import time
 import requests
 from dotenv import load_dotenv
 
+# Load environment variables from .env file
 load_dotenv()
 
 def filter_profile_data(data: dict) -> dict:
@@ -15,7 +16,7 @@ def filter_profile_data(data: dict) -> dict:
         "educations_details", "languages", "recommendations", 
         "current_company_name", "publications", "organizations", 
         "honors_and_awards", "bio_links", "first_name", "last_name",
-        "education", "certifications", "projects"
+        "education", "certifications", "projects", "experience"
     }
 
     # 1. Remove top-level keys not in our allowed list
@@ -68,6 +69,7 @@ def filter_profile_data(data: dict) -> dict:
         for org in orgs:
             if isinstance(org, dict):
                 org.pop("membership_number", None)
+    
 
     return data
 
