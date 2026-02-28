@@ -47,7 +47,7 @@ def get_linkedin_profile(profile_url: str) -> dict:
         info = status_resp.json()
         status = info.get("status")
 
-        if status == "ready":
+        if status == "ready" or status is None and info.get("name"):
             break
         if status == "failed":
             raise RuntimeError(f"Snapshot failed: {info}")
