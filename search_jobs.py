@@ -36,7 +36,8 @@ def search_jobs(keyword: str) -> list[dict]:
     trigger_url = f"https://api.brightdata.com/datasets/v3/trigger?dataset_id={dataset_id}"
     payload = [{"url": search_url}]
 
-    resp = requests.post(trigger_url, headers=headers, json=payload)
+    print(f"Triggering job search with payload {payload}")
+    resp = requests.post(trigger_url, headers=headers, json=payload, timeout=30)
     resp.raise_for_status()
     snapshot_id = resp.json().get("snapshot_id")
 
@@ -47,11 +48,15 @@ def search_jobs(keyword: str) -> list[dict]:
     status_url = f"https://api.brightdata.com/datasets/v3/snapshot/{snapshot_id}"
     poll_interval = int(os.environ.get("BRIGHTDATA_POLL_INTERVAL", 5))
 
+    print(f"Snapshot ID: {snapshot_id}. Polling status every {poll_interval}s...")
+
     while True:
-        status_resp = requests.get(status_url, headers=headers)
+        status_resp = requests.get(status_url, headers=headers, timeout=30)
         status_resp.raise_for_status()
         info = status_resp.json()
         status = info.get("status")
+
+        print(f"Polling status: {status}")
 
         if status == "ready":
             break
@@ -61,8 +66,9 @@ def search_jobs(keyword: str) -> list[dict]:
         time.sleep(poll_interval)
 
     # 3) Download results as JSON
+    print("Downloading results...")
     download_url = f"{status_url}?format=json"
-    data_resp = requests.get(download_url, headers=headers)
+    data_resp = requests.get(download_url, headers=headers, timeout=60)
     try:
         data_resp.raise_for_status()
     except requests.exceptions.HTTPError as e:
