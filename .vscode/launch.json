@@ -27,6 +27,15 @@
       "python": "${workspaceFolder}/.venv/bin/python",
       "console": "integratedTerminal",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Debug: search_jobs",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_search_jobs.py",
+      "python": "${workspaceFolder}/.venv/bin/python",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }
