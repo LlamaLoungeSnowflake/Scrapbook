@@ -134,7 +134,8 @@ def get_linkedin_profile(profile_url: str) -> dict:
 if __name__ == "__main__":
     import json
     # Example usage
-    sample_url = "https://www.linkedin.com/in/csabatothdev/"
+    user_slug = "ankita-sethi21"  # csabatothdev
+    sample_url = f"https://www.linkedin.com/in/{user_slug}/"
     try:
         profile = get_linkedin_profile(sample_url)
         print("\nFull profile JSON:")

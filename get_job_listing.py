@@ -79,7 +79,8 @@ def get_job_listing(job_url: str) -> dict:
 if __name__ == "__main__":
     import json
     # Example usage
-    sample_url = "https://www.linkedin.com/jobs/view/4377430140/"
+    job_id = "4377430140"
+    sample_url = f"https://www.linkedin.com/jobs/view/{job_id}/"
     try:
         job = get_job_listing(sample_url)
         print(json.dumps(job, indent=2, ensure_ascii=False))
